@@ -1,0 +1,38 @@
+public class Transpose
+{
+	public static void main(String args[])
+	{
+		int values[][];
+		values=new int[3][3];
+		int index=0;
+        for(int rIterator=0;rIterator<values.length;rIterator++)
+        {
+        	for(int cIterator=0;cIterator<values[rIterator].length;cIterator++)
+        	{
+        		values[rIterator][cIterator]=Integer.parseInt(args[index]);
+        		index++;
+        	}
+        } 
+        System.out.println("The matrix  ");
+        for(int i=0;i<values.length;i++)
+        {
+        	for(int j=0;j<values[i].length;j++)
+        	{
+        		System.out.print(values[i][j]+" ");
+        	}
+        	System.out.print("\n");
+        }
+        System.out.println("Transpose of matrix  ");
+      int newValues[][];
+        newValues=new int[3][3];
+        for(int rIterator=0;rIterator<values.length;rIterator++)
+        {
+        	for(int cIterator=0;cIterator<values[0].length;cIterator++)
+        	{
+        	 newValues[cIterator][rIterator]=values[cIterator][rIterator];
+        	 System.out.print(newValues[cIterator][rIterator]+" ");
+        	}
+        		System.out.print("\n");
+        } 
+	}
+}
