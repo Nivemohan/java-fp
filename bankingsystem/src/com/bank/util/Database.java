@@ -20,7 +20,7 @@ public class Database {
 	public PreparedStatement getPS(String query) {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "secure");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "oracle");
 			ps = connection.prepareStatement(query);
 			return ps;
 		} catch(Exception e) {
